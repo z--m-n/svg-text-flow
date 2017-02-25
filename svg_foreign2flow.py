@@ -2,7 +2,7 @@
 """
 Created on Fri Dec 23 15:36:31 2016
 
-@author: zeeman-m
+@author: matthias zeeman
 """
     
 from bs4 import BeautifulSoup, Tag   
