@@ -11,7 +11,11 @@ This apparently depends on how much of the SVG specification is implemented. For
 
 ## What can I find here?
 
-The translation between foreign object (XHTML code) and flowroot (Inkscape) text flow objects can be straighforward. An example of such a translation has been included for a simple case, using Python.
+The translation between Foreign Object (XHTML code) and flowroot (Inkscape) text flow objects can be straighforward. An example of such a translation has been included for a simple case, using Python.
+
+Example1.svg: a simple SVG document with text in a Foreign Object.
+Example1_mod.svg: the Foreign Object text flow was translated to Rootflow objects Inkscape. 
+Example1_mod+conv.svg: the text flow was converted to native SVG text objects, for save use on the web.
 
 Conversion of text flow objects to native SVG text objects is something Inkscape does very well, even from a command line.
 
