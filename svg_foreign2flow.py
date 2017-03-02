@@ -17,9 +17,9 @@ if __name__ == '__main__':
                             action="store_true")
     args = parser.parse_args()
     
-    if args.i != '' and os.path.exist(args.i):
+    if args.i != '' and os.path.exists(args.i):
         ifile = args.i
-    if args.o != '' and not os.path.exist(args.o):
+    if args.o != '' and not os.path.exists(args.o):
         ofile = args.o
         
     with open(ifile) as fd:
