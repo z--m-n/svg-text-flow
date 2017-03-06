@@ -11,12 +11,12 @@ Thankfully this problem is [transitional](http://wiki.inkscape.org/wiki/index.ph
 
 ## What can I find here?
 
-An very basic code example for the translation between foreignObject (XHTML code) and flowRoot (Inkscape) text flow. 
+A very basic code example for the translation between foreignObject (XHTML code) and flowRoot (Inkscape) text flow. 
 
 Example 1 includes:
 * Example1.svg: a simple SVG document with text in a Foreign Object.
 * Example1_mod.svg: the Foreign Object text flow was translated to Rootflow objects Inkscape. 
-* Example1_mod+conv.svg: the text flow was converted to native SVG text objects. This made the SVG safe for use on the web.
+* Example1_mod+conv.svg: the text flow was converted to plain SVG text elements. This made the SVG safe for use on the web and for conversion to other formats.
 
 The conversion of text flow objects to plain SVG text objects is something Inkscape does very well, also from the command line.
 ```bash
