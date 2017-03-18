@@ -3,7 +3,7 @@ Conversion of text objects in SVG
 
 ## Background
 
-For the time being there are [transitional](http://wiki.inkscape.org/wiki/index.php/Frequently_asked_questions#What_about_flowed_text.3F) issue with text flow objects in SVG documents, where
+For the time being there are [transitional](http://wiki.inkscape.org/wiki/index.php/Frequently_asked_questions#What_about_flowed_text.3F) issues with text flow objects in SVG documents, where
  * the text may not show correctly in SVG viewers such as web browsers
  * the text may not show up in another SVG editor
 
