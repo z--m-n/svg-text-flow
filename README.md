@@ -14,8 +14,8 @@ The SVG editor Inkscape (version 0.9) uses its own implementation for text flow 
 A very basic code example for the translation between foreignObject (XHTML code) and flowRoot (Inkscape) text flow. 
 
 Example 1 includes:
-* Example1.svg: a simple SVG document with text in a Foreign Object.
-* Example1_mod.svg: the Foreign Object text flow was translated to Rootflow objects Inkscape. 
+* Example1.svg: a simple SVG document with rectengular text flow in Foreign Object elements.
+* Example1_mod.svg: the Foreign Object text flow was translated to Rootflow objects for use in Inkscape. 
   ```bash 
   svg-text-flow.py -i Example1.svg -o Example1_mod.svg -s 100 100
   ```
