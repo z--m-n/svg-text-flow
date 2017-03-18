@@ -7,7 +7,7 @@ For the time being there are [transitional](http://wiki.inkscape.org/wiki/index.
  * the text may not show correctly in SVG viewers such as web browsers
  * the text may not show up in another SVG editor
 
-In the meantime, the SVG editor Inkscape (version 0.9) uses an implementation for text flow not found in the SVG specification, whereas foreignObject elements (non-SVG, XHTML) are not widely supported yet. 
+The SVG editor Inkscape (version 0.9) uses its own implementation for text flow not found in the SVG specification, whereas foreignObject elements (non-SVG, XHTML) are not widely supported yet. 
 
 ## What can I find here?
 
