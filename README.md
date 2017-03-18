@@ -1,5 +1,5 @@
 # svg-text-flow
-Conversion of text objects in SVG 
+Conversion of rectangular text flow objects in SVG 
 
 ## Background
 
