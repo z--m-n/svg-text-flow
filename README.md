@@ -17,7 +17,7 @@ Example 1 includes:
 * Example1.svg: a simple SVG document with text in a Foreign Object.
 * Example1_mod.svg: the Foreign Object text flow was translated to Rootflow objects Inkscape. 
   ```bash 
-  svg_foreign2flow.py -i Example1.svg -o Example1_mod.svg -s 100 100
+  svg-text-flow.py -i Example1.svg -o Example1_mod.svg -s 100 100
   ```
 * Example1_mod+conv.svg: the text flow was converted to plain SVG text elements. This made the SVG safe for use on the web and for conversion to other formats.
   The conversion of Rootflow-type text flow elements to plain SVG text elements is something Inkscape does very well, also from the command line:
