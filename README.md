@@ -28,18 +28,17 @@ optional arguments:
   -v, --verbose   increase output verbosity
 ```
 
-Example 1 includes:
-* Example1.svg: a simple SVG document with rectengular text flow in Foreign Object elements.
-* Example1_inkscape.svg: the Foreign Object text flow was translated to Rootflow objects for use in Inkscape. 
-* Example1_plain.svg: the text flow was converted to plain SVG text elements.
+## Other conversions
 
-The conversion of Rootflow-type text flow elements to plain SVG text elements is something Inkscape does very well, also from the command line:
+The conversion of flowed text to plain SVG text elements is something Inkscape does very well, also from the command line.
+
+Step 1:
 ```bash
 inkscape \ # convert to plain
 --export-plain-svg /path-to-file/Example1_plain.svg \
 --file /path-to-file/Example1_inkscape.svg
 ```
-
+Step 2:
 ```bash
 inkscape \ # convert flowed text to text
 --verb EditSelectAll \
@@ -51,10 +50,18 @@ inkscape \ # convert flowed text to text
 --file /path-to-file/Example1_plain.svg
 ```
 
-Or convert text to paths to remove the dependency on fonts (safe for use on the web):
+Or convert text to paths to remove any dependency on fonts (safe for use on the web):
 ```bash
 inkscape \ # convert text to paths
 --export-text-to-path \
 --export-plain-svg /path-to-file/Example1_plain.svg \
 --file /path-to-file/Example1_inkscape.svg
 ```
+
+## Examples
+
+Example 1 includes:
+* Example1.svg: a simple SVG document with rectengular text flow in Foreign Object elements.
+* Example1_inkscape.svg: the Foreign Object text flow was translated to Rootflow objects for use in Inkscape. 
+* Example1_plain.svg: the text flow was converted to plain SVG text elements.
+
