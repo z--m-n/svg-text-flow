@@ -15,18 +15,34 @@ A very basic code example for the translation between foreignObject (XHTML code)
 
 Example 1 includes:
 * Example1.svg: a simple SVG document with rectengular text flow in Foreign Object elements.
-* Example1_mod.svg: the Foreign Object text flow was translated to Rootflow objects for use in Inkscape. 
+* Example1_inkscape.svg: the Foreign Object text flow was translated to Rootflow objects for use in Inkscape. 
   ```bash 
-  svg-text-flow.py -i Example1.svg -o Example1_mod.svg -s 100 100
+  svg-text-flow.py -i Example1.svg -o Example1_inkscape.svg -s 100 100
   ```
-* Example1_mod+conv.svg: the text flow was converted to plain SVG text elements. This made the SVG safe for use on the web and for conversion to other formats.
-  The conversion of Rootflow-type text flow elements to plain SVG text elements is something Inkscape does very well, also from the command line:
-  ```bash
-  inkscape --file='Example1_mod.svg' \
-     --export-area-page \
-     --export-text-to-path \
-     --export-pdf='Example1_mod+conv.pdf' 
-  ```
+* Example1_plain.svg: the text flow was converted to plain SVG text elements.
 
+The conversion of Rootflow-type text flow elements to plain SVG text elements is something Inkscape does very well, also from the command line:
+```bash
+inkscape \ # convert to plain
+--export-plain-svg /path-to-file/Example1_plain.svg \
+--file /path-to-file/Example1_inkscape.svg
+```
 
+```bash
+inkscape \ # convert flowed text to text
+--verb EditSelectAll \
+--verb SelectionUnGroup \
+--verb SelectionUnGroup \
+--verb ObjectFlowtextToText \ # most relevant part
+--verb FileSave \
+--verb FileQuit \
+--file /path-to-file/Example1_plain.svg
+```
 
+Or convert text to paths to remove the dependency on fonts (safe for use on the web):
+```bash
+inkscape \ # convert text to paths
+--export-text-to-path \
+--export-plain-svg /path-to-file/Example1_plain.svg \
+--file /path-to-file/Example1_inkscape.svg
+```
