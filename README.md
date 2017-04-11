@@ -63,5 +63,4 @@ inkscape \ # convert text to paths
 Example 1 includes:
 * Example1.svg: a simple SVG document with rectengular text flow in Foreign Object elements.
 * Example1_inkscape.svg: the Foreign Object text flow was translated to Rootflow objects for use in Inkscape. 
-* Example1_plain.svg: the text flow was converted to plain SVG text elements.
-
+* Example1_plain.svg: the text flow was converted to plain SVG text elements. This should look very close to Example1.png.
