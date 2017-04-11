@@ -8,27 +8,28 @@ if __name__ == '__main__':
     import argparse
     
     parser = argparse.ArgumentParser(description='Translate text flow in SVG from foreignObject to flowRoot.')
-    parser.add_argument("-i", nargs=1, metavar=('ifile'),default='',
-                            help="input svg", type=str)
-    parser.add_argument("-o", nargs=1, metavar=('ofile'),default='',
-                            help="output svg", type=str)
+    parser.add_argument("-i", nargs=1, metavar=('input'),default='',
+                            help="path to input SVG", type=str)
+    parser.add_argument("-o", nargs=1, metavar=('output'),default='',
+                            help="path to output SVG", type=str)
     parser.add_argument("-s", nargs=2, metavar=('scale'),default=[75, 115],
-                            help="scale font size and height (%)", type=int)                            
-    parser.add_argument("-f", nargs=1, metavar=('dfont'),default="sans-serif",
+                            help='scale font size and line height (%%)', type=int)                            
+    parser.add_argument("-f", nargs=1, metavar=('font'),default=["sans-serif"],
                             help="default font", type=str)                              
     parser.add_argument("-v","--verbose", help="increase output verbosity",
                             action="store_true")
     args = parser.parse_args()
     
-    ifile = args.i[0] if args.i and os.path.exists(args.i[0]) else ''
-    ofile = args.o[0] if args.o and not os.path.exists(args.o[0]) else ''
+    ifile = args.i[0] if args.i else None 
+    ofile = args.o[0] if args.o else None
     scale = args.s
-    dfont = args.f[0] 
+    dfont = args.f[0]
     
     print("Default Font: {}".format(dfont))
     print("     Scaling: {0}% (font) {1}% (height)".format(scale[0],scale[1]))
        
-    if not (ifile and ofile):
+    if not (ifile and ofile) or \
+        not os.path.exists(ifile) or os.path.exists(ofile):
         raise SystemExit('Exit: provide valid input ("{0}") and output ("{1}") file names'.format(ifile,ofile))
     
     with open(ifile) as fd:
@@ -90,6 +91,5 @@ if __name__ == '__main__':
         for pt in tag4:
             tag1.append(pt)
 
-
     with open(ofile,'w') as fd:
-        fd.write(str(soup))
+        fd.write(str(soup))   
