@@ -35,7 +35,7 @@ if __name__ == '__main__':
     with open(ifile) as fd:
         soup = BeautifulSoup(fd.read(),'xml')
 
-    # foriegnObject objects
+    # locate foreignObject objects
     foos = soup.findAll('foreignObject')
 
     # style
