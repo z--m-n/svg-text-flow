@@ -15,7 +15,7 @@ A very basic code example for the translation between foreignObject (XHTML code)
 
 Usage:
 ```
-svg_foreign2flow.py [-h] [-i input] [-o output] [-s scale scale] [-f font] [-v]
+svg-text-flow.py [-h] [-i input] [-o output] [-s scale scale] [-f font] [-v]
 
 Translate text flow in SVG from foreignObject to flowRoot.
 
